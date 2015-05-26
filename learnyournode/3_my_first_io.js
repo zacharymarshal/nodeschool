@@ -3,7 +3,7 @@ var filepath = process.argv[2];
 
 var contents = fs.readFileSync(filepath).toString();
 
-console.log(contents.split("\n").length - 1);
+console.log(contents.split('\n').length - 1);
 
 // Their Solution
 // var fs = require('fs')
