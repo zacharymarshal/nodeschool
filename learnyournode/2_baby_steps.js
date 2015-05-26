@@ -1,3 +1,5 @@
+'use strict';
+
 // My Solution
 console.log(
   process.argv.slice(2).reduce(
