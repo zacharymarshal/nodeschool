@@ -7,7 +7,7 @@ var extFilter = process.argv[3];
 
 ls(dirPath, extFilter, function(err, files) {
   if (err) {
-    return console.log('Oh noes! ' + err);
+    return console.error('Oh noes!', err);
   }
 
   files.map(function (file) {
