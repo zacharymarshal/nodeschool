@@ -1,14 +1,14 @@
 'use strict';
 
 function countWords(inputWords) {
-  return inputWords.reduce(function(prev, curr) {
-    if (curr in prev) {
-      prev[curr] += 1;
+  return inputWords.reduce(function(wordCounts, word) {
+    if (word in wordCounts) {
+      wordCounts[word] += 1;
     } else {
-      prev[curr] = 1;
+      wordCounts[word] = 1;
     }
 
-    return prev;
+    return wordCounts;
   }, {});
 }
 
