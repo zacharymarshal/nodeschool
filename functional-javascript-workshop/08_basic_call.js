@@ -1,13 +1,9 @@
 'use strict';
 
 function duckCount() {
-  return [].reduce.call(arguments, function(numOfDucks, arg) {
-    if (!Object.prototype.hasOwnProperty.call(arg, 'quack')) {
-      return numOfDucks;
-    }
-
-    return ++numOfDucks;
-  }, 0);
+  return Array.prototype.slice.call(arguments).filter(function(arg) {
+    return Object.prototype.hasOwnProperty.call(arg, 'quack');
+  }).length;
 }
 
 module.exports = duckCount;
