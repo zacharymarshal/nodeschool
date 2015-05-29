@@ -2,11 +2,7 @@
 
 function countWords(inputWords) {
   return inputWords.reduce(function(wordCounts, word) {
-    if (word in wordCounts) {
-      wordCounts[word] += 1;
-    } else {
-      wordCounts[word] = 1;
-    }
+    wordCounts[word] = ++wordCounts[word] || 1;
 
     return wordCounts;
   }, {});
