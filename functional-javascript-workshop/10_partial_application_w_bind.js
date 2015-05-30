@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = function(namespace) {
-  return console.log.bind(undefined, namespace);
+  return console.log.bind(console, namespace);
 };
