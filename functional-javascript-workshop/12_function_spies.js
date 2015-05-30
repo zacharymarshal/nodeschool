@@ -8,7 +8,7 @@ function Spy(target, method) {
   target[method] = function() {
     ++spy.count;
 
-    return originalFn.apply(target, Array.prototype.slice.call(arguments));
+    return originalFn.apply(target, arguments);
   };
 
   return spy;
