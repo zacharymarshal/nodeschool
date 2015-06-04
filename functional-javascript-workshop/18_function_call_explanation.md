@@ -14,6 +14,6 @@ function bind(fn, obj) {
 }
 ```
 
-So doing `Function.prototype.call.bind(Array.prototype.slice)` is similar to doing `Function.call.call(Array.prototype.slice, [1, 2, 3], 2));`
+So doing `Function.prototype.call.bind(Array.prototype.slice)` would be like executing `Function.call.call(Array.prototype.slice, [1, 2, 3], 2));`
 
 Good stuff.
